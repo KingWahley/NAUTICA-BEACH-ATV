@@ -3,7 +3,7 @@ import Link from 'next/link';
 export default function BookNow() {
   return (
     <main className="flex-1 w-full pt-[200px] px-8 max-w-[1600px] mx-auto pb-24" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/noise-pattern-with-subtle-cross-lines.png")' }}>
-      <h1 className="font-archivo text-[12vw] uppercase leading-[0.85] tracking-[-0.04em] mb-16 selection:bg-brand-black selection:text-brand-orange break-words">
+      <h1 className="font-archivo hidden sm:block text-[12vw] uppercase leading-[0.85] tracking-[-0.04em] mb-16 selection:bg-brand-black selection:text-brand-orange break-words">
         BOOK NOW
       </h1>
       

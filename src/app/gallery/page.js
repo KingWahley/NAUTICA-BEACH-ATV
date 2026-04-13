@@ -31,7 +31,7 @@ export default function Gallery() {
         {images.map((src, i) => (
           <div
             key={i}
-            className="relative aspect-square bg-brand-black border-2 border-brand-black flex items-center justify-center grayscale hover:grayscale-0 transition-all hover:scale-[1.02] duration-300 overflow-hidden"
+            className="relative aspect-square bg-brand-black border-2 border-brand-black flex items-center justify-center transition-all hover:scale-[1.02] duration-300 overflow-hidden"
           >
             <Image
               src={src}
