@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   return (
@@ -6,7 +7,8 @@ export default function Navbar() {
       <div className="flex justify-between items-center w-full">
         {/* Logo */}
         <Link href="/" className="font-archivo text-2xl uppercase tracking-[-0.04em] leading-none pointer-events-auto text-brand-black">
-          Nautica
+        <Image src="/images/logo.png" alt="Logo" width={100} height={100} />
+          
         </Link>
 
         {/* Floating Pill Navigation */}

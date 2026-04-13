@@ -1,7 +1,7 @@
 export default function MarqueeSection() {
   return (
-    <section className="bg-brand-black outline outline-2 outline-brand-black w-[110vw] -ml-[5vw] -skew-y-2 py-16 my-24 overflow-hidden relative z-10 selection:bg-brand-orange selection:text-brand-black">
-      <div className="flex flex-col gap-4 font-archivo text-[10vw] leading-none uppercase whitespace-nowrap tracking-[-0.04em]">
+    <section className="bg-brand-black outline outline-2 outline-brand-black w-[110vw] -ml-[5vw] -skew-y-2 py-8 my-16 overflow-hidden relative z-10 selection:bg-brand-orange selection:text-brand-black">
+      <div className="flex flex-col gap-2 font-archivo text-[6vw] leading-none uppercase whitespace-nowrap tracking-[-0.04em]">
         <div className="text-brand-orange flex gap-8">
             <div className="animate-marquee flex gap-8 whitespace-nowrap shrink-0">
               <span>PREMIUM ATV EXPERIENCE • BEACH ADVENTURE •</span>

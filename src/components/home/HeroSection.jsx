@@ -19,7 +19,7 @@ export default function HeroSection() {
           NAUTICA BEACH ATV
         </h1>
         
-        <div className="text-center font-mono font-bold text-xs md:text-sm mb-6 max-w-2xl mx-auto selection:bg-brand-black selection:text-brand-orange leading-loose">
+        <div className="text-center font-mono font-bold text-xs md:text-sm mb-6 max-w-2xl mx-auto text-brand-black leading-loose">
           PREMIUM ATV EXPERIENCE — FAST, FUN, AND UNFORGETTABLE ATV RIDES IN A VIBRANT BEACH SETTING. PERFECT FOR FRIENDS, FAMILIES, AND GROUP OUTINGS LOOKING FOR ADVENTURE AND FUN.
         </div>
 
