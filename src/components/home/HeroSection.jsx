@@ -4,20 +4,15 @@ import ScrollIndicator from "@/components/ScrollIndicator";
 export default function HeroSection() {
   return (
     <section className="relative w-full h-[100vh] pt-[100px] md:pt-[120px] pb-6 flex flex-col justify-end px-8 uppercase overflow-hidden">
-      {/* Background Video */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/video/dune.mp4" type="video/mp4" />
-      </video>
+      {/* Background Image */}
+      <img 
+        src="/images/hero.JPG"
+        alt="Nautica Beach ATV Background"
+        className="absolute   inset-0 w-full h-full object-cover z-0"
+      />
       
-      {/* Orange Overlay */}
-      {/* opacity and mix-blend-multiply to keep the brutalist kinetic orange look */}
-      <div className="absolute inset-0 bg-brand-orange opacity-80 mix-blend-multiply z-0"></div>
+    
+    <div className="absolute  inset-0 bg-brand-orange/10 backdrop-blur-xs z-0"></div>
 
       <div className="relative z-10 w-full max-w-[1600px] mx-auto h-full flex flex-col justify-end">
         <h1 className="font-archivo text-7xl leading-[0.85] tracking-[-0.04em] text-center w-full break-words mb-6 selection:bg-brand-black selection:text-brand-orange mt-auto">
