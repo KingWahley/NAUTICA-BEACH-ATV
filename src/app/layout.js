@@ -21,7 +21,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Kinetic Orange",
+  title: "NAUTICA BEACH AT",
   description: "Brutalist Digital Experience",
 };
 
