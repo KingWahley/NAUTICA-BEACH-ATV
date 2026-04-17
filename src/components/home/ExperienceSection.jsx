@@ -1,21 +1,32 @@
-import ServiceCard from "@/components/ServiceCard";
+"use client";
+
+import { motion } from "framer-motion";
+import ExperienceList from "@/components/home/ExperienceList";
+import { experiences } from "@/components/home/content";
+
+const sectionVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.14,
+      delayChildren: 0.08,
+    },
+  },
+};
 
 export default function ExperienceSection() {
-  const experiences = [
-    { title: "ATV Rides", tags: ["Individual", "Fun", "Fast"], image: "/images/IMG_0471.JPG" },
-    { title: "Group Rides", tags: ["Friends", "Packages", "Deals"], image: "/images/IMG_0473.JPG" },
-    { title: "Beach Adventure", tags: ["Scenic", "Ocean", "Vibrant"], image: "/images/IMG_0481.JPG" },
-    { title: "Corporate Bonding", tags: ["Teams", "Outings", "Events"], image: "/images/IMG_0483.JPG" }
-  ];
-
   return (
-    <section className="bg-brand-ocean text-white py-24 mb-24 selection:bg-brand-orange selection:text-brand-black">
-      <div className="max-w-[1600px] mx-auto relative">
-        {experiences.map((svc, i) => (
-          <ServiceCard key={i} index={i + 1} title={svc.title} tags={svc.tags} image={svc.image} />
-        ))}
+    <section className="bg-brand-white text-white py-8 mb-24 selection:bg-brand-orange selection:text-brand-black">
+      <motion.div
+        className="max-w-[1600px] mx-auto relative"
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.18 }}
+      >
+        <ExperienceList items={experiences} />
         <div className="border-t border-white/20 w-full" />
-      </div>
+      </motion.div>
     </section>
   );
 }

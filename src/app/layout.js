@@ -1,5 +1,6 @@
 import { Archivo_Black, Space_Mono, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import { CTASection } from "@/components/home";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col font-inter bg-brand-orange text-brand-black">
         <Navbar />
         {children}
+        <CTASection />
         <Footer />
       </body>
     </html>

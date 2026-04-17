@@ -7,10 +7,10 @@ export default function CTASection() {
       style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/basketball.png")' }}
     >
       <div className="relative z-10 flex flex-col items-center">
-        <h2 className="font-archivo text-[10vw] md:text-[8vw] leading-[0.85] tracking-[-0.04em] text-brand-orange">
+        <h2 className="font-archivo text-[10vw] md:text-[8vw] leading-[0.85] tracking-[-0.04em] text-brand-white">
           READY TO<br />RIDE?
         </h2>
-        <Link href="/book-now" className="mt-10 md:mt-12 bg-brand-orange text-brand-black rounded-full font-mono font-bold text-lg md:text-xl tracking-[-0.02em] px-8 py-4 md:px-10 md:py-5 transition-transform duration-300 hover:scale-[1.05] hover:bg-transparent hover:text-brand-orange border-2 border-brand-white">
+        <Link href="/book-now" className="mt-10 md:mt-12 bg-brand-white text-brand-black rounded-full font-mono font-bold text-lg md:text-xl tracking-[-0.02em] px-8 py-4 md:px-10 md:py-5 transition-transform duration-300 hover:scale-[1.05] hover:bg-transparent hover:text-brand-orange border-2 border-brand-white">
           BOOK SESSION
         </Link>
       </div>

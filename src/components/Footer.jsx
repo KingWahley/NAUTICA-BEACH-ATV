@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-brand-black bg-brand-orange text-brand-black font-mono text-[12px] p-8 flex flex-col lg:flex-row justify-between items-center uppercase font-bold mt-auto lg:h-[100px] gap-6 text-center lg:text-left selection:bg-brand-black selection:text-brand-orange">
+    <footer className="border-t-2 border-brand-black bg-brand-white text-brand-black font-mono text-[12px] p-8 flex flex-col lg:flex-row justify-between items-center uppercase font-bold mt-auto lg:h-[100px] gap-6 text-center lg:text-left selection:bg-brand-black selection:text-brand-orange">
       <div className="shrink-0">© {new Date().getFullYear()} LEISURE SPORTS ATV</div>
       
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 flex-wrap justify-center">

@@ -1,7 +1,9 @@
-import HeroSection from "@/components/home/HeroSection";
-import MarqueeSection from "@/components/home/MarqueeSection";
-import ExperienceSection from "@/components/home/ExperienceSection";
-import CTASection from "@/components/home/CTASection";
+import {
+  ExperienceSection,
+  HeroSection,
+  MarqueeSection,
+  ReviewSection,
+} from "@/components/home";
 
 export default function Home() {
   return (
@@ -9,7 +11,7 @@ export default function Home() {
       <HeroSection />
       <MarqueeSection />
       <ExperienceSection />
-      <CTASection />
+      <ReviewSection />
     </main>
   );
 }
