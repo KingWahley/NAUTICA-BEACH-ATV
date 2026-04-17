@@ -33,7 +33,7 @@ const heroItemVariants = {
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[100vh] pt-[88px] md:pt-[120px] pb-6 flex flex-col justify-end px-8 uppercase overflow-hidden">
+    <section className="relative w-full h-[100vh] pt-[88px] md:pt-[120px] pb-6 flex flex-col justify-center md:justify-end px-8 uppercase overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src={heroContent.image}
@@ -67,7 +67,7 @@ export default function HeroSection() {
             textShadow: `
       0 0 0.5px #fff,
       0 0 1px #fff,
-      0 0 2px #fff
+      0 0 2 px #fff
     `,
           }}
         >
