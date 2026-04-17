@@ -43,3 +43,11 @@ body {
   border-color: var(--color-brand-black);
 }
 
+.mobile-nav-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mobile-nav-scroll::-webkit-scrollbar {
+  display: none;
+}

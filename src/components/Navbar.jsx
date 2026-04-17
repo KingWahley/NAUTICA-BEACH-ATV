@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 
 const navItems = [
@@ -74,6 +75,7 @@ const mobileItemVariants = {
 };
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -95,6 +97,8 @@ export default function Navbar() {
       document.body.style.overflow = "";
     };
   }, [isMenuOpen]);
+
+  const isActiveLink = (href) => pathname === href;
 
   return (
     <nav
@@ -128,10 +132,13 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={isActiveLink(item.href) ? "page" : undefined}
               className={`px-3 py-1 uppercase font-bold tracking-[-0.02em] whitespace-nowrap rounded transition-colors ${
-                isScrolled
-                  ? "hover:bg-brand-orange hover:text-brand-black"
-                  : "hover:bg-brand-white hover:text-brand-black"
+                isActiveLink(item.href)
+                  ? "text-brand-orange"
+                  : isScrolled
+                    ? "hover:bg-brand-orange hover:text-brand-black"
+                    : "hover:bg-brand-white hover:text-brand-black"
               }`}
             >
               {item.label}
@@ -187,7 +194,7 @@ export default function Navbar() {
               exit="exit"
               className="md:hidden absolute top-full left-0 right-0 mt-3 origin-top"
             >
-              <div className="overflow-hidden border-2 border-brand-black bg-brand-orange text-brand-black shadow-[10px_10px_0_0_#000000]">
+              <div className="max-h-[calc(100dvh-7rem)] overflow-y-auto overflow-x-hidden overscroll-contain mobile-nav-scroll border-2 border-brand-black bg-brand-orange text-brand-black shadow-[10px_10px_0_0_#000000]">
                 <div className="grid grid-cols-3 border-b-2 border-brand-black">
                   <div className="h-3 bg-brand-black" />
                   <div className="h-3 bg-brand-white border-x-2 border-brand-black" />
@@ -208,7 +215,12 @@ export default function Navbar() {
                         <Link
                           href={item.href}
                           onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center justify-between border-2 border-brand-black bg-brand-black px-4 py-4 text-brand-white transition-colors hover:bg-brand-white hover:text-brand-black"
+                          aria-current={isActiveLink(item.href) ? "page" : undefined}
+                          className={`flex items-center justify-between border-2 border-brand-black px-4 py-4 transition-colors ${
+                            isActiveLink(item.href)
+                              ? "bg-brand-black text-brand-orange"
+                              : "bg-brand-black text-brand-white hover:bg-brand-white hover:text-brand-black"
+                          }`}
                         >
                           <span className="font-archivo text-2xl leading-none">
                             {item.label}

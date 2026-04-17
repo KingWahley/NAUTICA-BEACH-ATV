@@ -62,12 +62,12 @@ export default function HeroSection() {
 
         <motion.div
           variants={heroItemVariants}
-          className="text-center font-mono font-extrabold text-xs md:text-sm mb-6 max-w-2xl mx-auto text-brand-black leading-loose"
+          className="text-center font-mono font-extrabold text-xs md:text-sm mb-6 max-w-2xl mx-auto text-brand-black leading-loose bg-white/60 px-4 py-3 rounded-2xl md:bg-transparent md:px-0 md:py-0 md:rounded-none"
           style={{
             textShadow: `
-      0 0 0.5px #fff,
-      0 0 1px #fff,
-      0 0 2 px #fff
+            0 0 1px #fff,
+            0 0 2px #fff,
+            0 0 3px #fff
     `,
           }}
         >
