@@ -49,7 +49,7 @@ export default function ReviewSection() {
             <h2 className="mt-4 max-w-4xl font-archivo text-[16vw] leading-[0.86] tracking-[-0.05em] text-brand-black md:text-[7vw]">
               WHAT THE
               <br />
-              CREW SAYS
+              RIDERS SAY
             </h2>
           </motion.div>
 
@@ -65,7 +65,7 @@ export default function ReviewSection() {
               href="/testimonials"
               className="w-fit rounded-full border-2 border-brand-black bg-brand-black px-6 py-3 font-mono text-sm font-bold text-brand-white transition-colors duration-300 hover:bg-transparent hover:text-brand-black"
             >
-              SEE MORE REVIEWS
+              BOOK RIDE
             </Link>
           </motion.div>
         </div>
@@ -75,27 +75,27 @@ export default function ReviewSection() {
             <motion.article
               key={review.author}
               variants={cardVariants}
-              className="group relative flex min-h-[360px] flex-col justify-between border-2 border-brand-black bg-brand-white p-8 shadow-[10px_10px_0_0_#000000] transition-transform duration-300 hover:-translate-y-2"
+              className="group relative flex min-h-[200px] flex-col justify-between border-2 border-brand-black bg-brand-white p-6 shadow-[10px_10px_0_0_#000000] transition-transform duration-300 hover:-translate-y-2"
             >
-              <div className="flex items-start justify-between gap-4 border-b-2 border-brand-black pb-5 font-mono text-[11px] font-bold tracking-[0.22em] text-brand-black">
+              <div className="flex items-start justify-between gap-4 border-b-2 border-brand-black pb-4 font-mono text-[9px] font-bold tracking-[0.18em] text-brand-black">
                 <span>{`0${index + 1}`}</span>
                 <span className="rounded-full bg-brand-orange px-3 py-1">
                   {review.highlight}
                 </span>
               </div>
 
-              <p className="mt-8 font-archivo text-3xl leading-tight tracking-[-0.04em] text-brand-black md:text-[2.2rem]">
+              <p className="mt-6 font-archivo text-[1.35rem] leading-tight tracking-[-0.035em] text-brand-black md:text-[1.6rem]">
                 &quot;{review.quote}&quot;
               </p>
 
-              <div className="mt-8 flex items-end justify-between gap-4 border-t-2 border-brand-black pt-5 font-mono font-bold text-brand-black">
+              <div className="mt-6 flex items-end justify-between gap-4 border-t-2 border-brand-black pt-4 font-mono font-bold text-brand-black">
                 <div>
-                  <p className="text-lg">{review.author}</p>
-                  <p className="text-[11px] tracking-[0.22em] text-brand-black/70">
+                  <p className="text-sm">{review.author}</p>
+                  <p className="text-[9px] tracking-[0.18em] text-brand-black/70">
                     {review.detail}
                   </p>
                 </div>
-                <div className="text-3xl leading-none text-brand-orange transition-transform duration-300 group-hover:rotate-12">
+                <div className="text-[1.7rem] leading-none text-brand-orange transition-transform duration-300 group-hover:rotate-12">
                   +
                 </div>
               </div>

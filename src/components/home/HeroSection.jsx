@@ -1,8 +1,7 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import HeroActions from "@/components/home/HeroActions";
 import HeroMeta from "@/components/home/HeroMeta";
 import { heroContent } from "@/components/home/content";
@@ -33,27 +32,11 @@ const heroItemVariants = {
 };
 
 export default function HeroSection() {
-  const sectionRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "32%"]);
-  const backgroundScale = useTransform(scrollYProgress, [0, 1], [1.12, 1.22]);
-  const overlayY = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
-  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "42%"]);
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0.12]);
-
   return (
     <section
-      ref={sectionRef}
       className="relative w-full h-[100vh] pt-[100px] md:pt-[120px] pb-6 flex flex-col justify-end px-8 uppercase overflow-hidden"
     >
-      <motion.div
-        style={{ y: backgroundY, scale: backgroundScale }}
-        className="absolute inset-0 z-0"
-      >
+      <div className="absolute inset-0 z-0">
         <Image
           src={heroContent.image}
           alt="Nautica Beach ATV Background"
@@ -62,15 +45,11 @@ export default function HeroSection() {
           sizes="100vw"
           className="object-cover"
         />
-      </motion.div>
+      </div>
+
+      <div className="absolute inset-0 bg-brand-orange/10 backdrop-blur-xs z-0" />
 
       <motion.div
-        style={{ y: overlayY }}
-        className="absolute inset-0 bg-brand-orange/10 backdrop-blur-xs z-0"
-      />
-
-      <motion.div
-        style={{ y: contentY, opacity: contentOpacity }}
         variants={heroContentVariants}
         initial="hidden"
         animate="visible"
@@ -78,7 +57,7 @@ export default function HeroSection() {
       >
         <motion.h1
           variants={heroItemVariants}
-          className="font-archivo text-7xl leading-[0.85] tracking-[-0.04em] text-center w-full break-words mb-6 selection:bg-brand-black selection:text-brand-orange mt-auto"
+          className="font-archivo text-5xl leading-[0.85] tracking-[-0.04em] text-center w-full break-words mb-6 selection:bg-brand-black selection:text-brand-orange mt-auto md:text-7xl"
         >
           {heroContent.title}
         </motion.h1>
