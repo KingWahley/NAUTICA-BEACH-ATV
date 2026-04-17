@@ -196,9 +196,9 @@ export default function Navbar() {
 
                 <div className="px-4 py-4">
                   <div className="mb-4 flex items-center justify-between border-2 border-brand-black bg-brand-white px-4 py-3">
-                    <span className="font-archivo text-2xl leading-none">RIDE OUT</span>
+                    <span className="font-archivo text-2xl leading-none">MENU</span>
                     <span className="text-[10px] font-bold tracking-[0.25em]">
-                      OPEN MENU
+                      ......
                     </span>
                   </div>
 

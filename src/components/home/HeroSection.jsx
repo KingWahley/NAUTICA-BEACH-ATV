@@ -33,9 +33,7 @@ const heroItemVariants = {
 
 export default function HeroSection() {
   return (
-    <section
-      className="relative w-full h-[100vh] pt-[100px] md:pt-[120px] pb-6 flex flex-col justify-end px-8 uppercase overflow-hidden"
-    >
+    <section className="relative w-full h-[100vh] pt-[88px] md:pt-[120px] pb-6 flex flex-col justify-end px-8 uppercase overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
           src={heroContent.image}
@@ -53,18 +51,25 @@ export default function HeroSection() {
         variants={heroContentVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 w-full max-w-[1600px] mx-auto h-full flex flex-col justify-end"
+        className="relative z-10 w-full max-w-[1600px] mx-auto h-auto md:h-full flex flex-col justify-end"
       >
         <motion.h1
           variants={heroItemVariants}
-          className="font-archivo text-5xl leading-[0.85] tracking-[-0.04em] text-center w-full break-words mb-6 selection:bg-brand-black selection:text-brand-orange mt-auto md:text-7xl"
+          className="font-archivo text-5xl leading-[0.85] tracking-[-0.04em] text-center w-full break-words mb-6 selection:bg-brand-black selection:text-brand-orange mt-0 md:mt-auto md:text-7xl"
         >
           {heroContent.title}
         </motion.h1>
 
         <motion.div
           variants={heroItemVariants}
-          className="text-center font-mono font-bold text-xs md:text-sm mb-6 max-w-2xl mx-auto text-brand-black leading-loose"
+          className="text-center font-mono font-extrabold text-xs md:text-sm mb-6 max-w-2xl mx-auto text-brand-black leading-loose"
+          style={{
+            textShadow: `
+      0 0 0.5px #fff,
+      0 0 1px #fff,
+      0 0 2px #fff
+    `,
+          }}
         >
           {heroContent.description}
         </motion.div>

@@ -16,7 +16,7 @@ const sectionVariants = {
 
 export default function ExperienceSection() {
   return (
-    <section className="bg-brand-white text-white py-8 mb-24 selection:bg-brand-orange selection:text-brand-black">
+    <section className="bg-brand-white text-white py-2 sm:py-8 mb-24 selection:bg-brand-orange selection:text-brand-black">
       <motion.div
         className="max-w-[1600px] mx-auto relative"
         variants={sectionVariants}
