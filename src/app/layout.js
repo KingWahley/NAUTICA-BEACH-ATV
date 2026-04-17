@@ -24,6 +24,11 @@ const inter = Inter({
 export const metadata = {
   title: "NAUTICA BEACH AT",
   description: "Brutalist Digital Experience",
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {

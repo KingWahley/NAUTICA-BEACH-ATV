@@ -114,7 +114,7 @@ export default function Navbar() {
           className="font-archivo text-2xl uppercase tracking-[-0.04em] leading-none pointer-events-auto shrink-0 relative z-20"
         >
           <Image
-            src="/images/logo.png"
+            src={isScrolled ? "/images/logo2.png" : "/images/logo.png"}
             alt="Logo"
             width={isScrolled ? 54 : 100}
             height={isScrolled ? 54 : 100}
