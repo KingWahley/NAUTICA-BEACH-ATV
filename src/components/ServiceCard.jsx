@@ -82,7 +82,7 @@ export default function ServiceCard({ index, title, tags, image, href = "/book-n
         >
           <motion.h3
             variants={cardItemVariants}
-            className="font-archivo text-5xl md:text-[7vw] leading-[0.85] uppercase tracking-[-0.04em] text-[#758BFD] m-0 md:max-w-[70%]"
+            className="font-archivo text-5xl md:text-[7vw] leading-[0.85] uppercase tracking-[-0.04em] text-brand-orange m-0 md:max-w-[70%]"
           >
             {title}
           </motion.h3>
