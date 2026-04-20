@@ -23,7 +23,8 @@ const inter = Inter({
 
 export const metadata = {
   title: "NAUTICA BEACH AT",
-  description: "Brutalist Digital Experience",
+  description:
+    "Welcome to an exciting ATV experience by the beach — perfect for friends, families, and group outings looking for adventure and fun.",
   icons: {
     icon: "/images/logo.png",
     shortcut: "/images/logo.png",
