@@ -55,7 +55,7 @@ export default function HeroSection() {
       >
         <motion.h1
           variants={heroItemVariants}
-          className="font-archivo text-5xl leading-[0.85] tracking-[-0.04em] text-center w-full break-words mb-6 selection:bg-brand-black text-brand-white mt-0 md:mt-auto md:text-7xl"
+          className="font-archivo text-5xl leading-[0.85] tracking-[-0.04em] text-center w-full break-words mb-6 selection:bg-brand-black selection:text-brand-white mt-0 md:mt-auto md:text-7xl"
         >
           {heroContent.title}
         </motion.h1>
