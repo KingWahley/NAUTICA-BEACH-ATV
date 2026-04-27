@@ -2,6 +2,7 @@ import { Archivo_Black, Space_Mono, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import { CTASection } from "@/components/home";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const archivo = Archivo_Black({
@@ -39,10 +40,12 @@ export default function RootLayout({ children }) {
       className={`${archivo.variable} ${spaceMono.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-inter bg-brand-orange text-brand-black">
-        <Navbar />
-        {children}
-        <CTASection />
-        <Footer />
+        <SmoothScroll>
+          <Navbar />
+          {children}
+          <CTASection />
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );
